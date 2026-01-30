@@ -1,0 +1,31 @@
+GET all books-http://localhost:8080/books
+GET book by ID-http://localhost:8080/books?id=B010
+POST (Create) book-http://localhost:8080/books
+Body → raw → Text-B2001,Operating Systems,Andrew Tanenbaum
+PUT (Update) book-http://localhost:8080/books?id=B2001
+Body:Advanced OS,Andrew Tanenbaum
+DELETE book-http://localhost:8080/books?id=B2001
+
+USER 
+
+GET all users-GET http://localhost:8080/users
+POST user-POST http://localhost:8080/users
+Body:U005,student123,student123##,STUDENT
+GET user by ID-GET http://localhost:8080/users?id=U004
+http://localhost:8080/users?id=U9999
+user not found
+PUT user-PUT http://localhost:8080/users?id=U004
+Body:admin_updated,newpass,ADMIN
+DELETE user-DELETE http://localhost:8080/users?id=U004
+
+
+Method 2: Browser (GET only)
+
+http://localhost:8080/books
+http://localhost:8080/users
+
+
+Method 3: Command Line (optional)
+
+curl -X POST http://localhost:8080/books \
+-d "B3001,Networks,Andrew Tanenbaum"
